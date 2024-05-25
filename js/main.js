@@ -1,5 +1,4 @@
 import { fetchApi } from "./fetch";
-
 const API_KEY = 'api_key=05286bc784abc8afd47c10b584fd977f';
 const BASE_URL = 'https://api.themoviedb.org/3/';
 const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&'+API_KEY;
@@ -38,27 +37,15 @@ const filterContainer = document.getElementById("filter-container-id");
 
 getMovies(API_URL)
 
-function  getMovies(url) {
-    
-    fetch(url).then(res => res.json()).then(data => {
-        if(data.results.length !== 0){
-            showMovies(data.results.splice(2,10));
-            console.log(data.results)
-        } else {
-            movieGrid.innerHTML= `<h1 class="error">No Results Found</h1>`
-        }
-    })
-}
-
-/* async function getMovies() {
-   let data = await fetchApi(API_URL)
-   if(data.results.length !== 0){
-    showMovies(data.results.splice(1,10));
+async function getMovies (url) {
+    const data = await fetchApi(url)
+    if(data.results.length !== 0){
+        showMovies(data.results.splice(2,10));
+        console.log(data.results)
     } else {
         movieGrid.innerHTML= `<h1 class="error">No Results Found</h1>`
     }
-    }
-    getMovies() */
+}
 
 let selectedGenre = []
 setGenre();
