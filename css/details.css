@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(/img/Background.png) ;
+    background-position: center;
+    background-size: 100%;
+}
+
+#horizontal-image {
+    border-radius: 6rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    opacity: 0.5;
+}
+
+#title-container-blur {
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(24px); 
+    background-color: rgba(1, 1, 17, 0.09);
+    border-radius: .3rem;
+    padding-top: 0.3rem;
+    gap:0.5rem;
+    text-align: center;
+    border-radius: 2.5rem;
+    bottom: -5%;
+}
+
+#rating-blur {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    box-shadow: 0 15px 25px rgba(50, 50, 52, 0.421); 
+    backdrop-filter: blur(20px); 
+    background-color: rgba(23, 22, 22, 0.717);
+    height: 2rem;
+    width: 3.5rem;
+    border-radius: .3rem;
+    padding-top: 0.3rem;
+    gap:0.5rem
+}
