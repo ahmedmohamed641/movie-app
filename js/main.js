@@ -118,7 +118,6 @@ searchContainer.addEventListener('submit', (e) => {
     const searchItem = search.value
     if (searchItem) {
          getMovies(searchURL+'&query='+searchItem)
-       
     } else {
         getMovies(API_URL)
     }
