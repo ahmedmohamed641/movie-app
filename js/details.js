@@ -10,7 +10,7 @@ async function get_movie_by_id (id) {
     return data
 }
 
-    async function showDetails (card) {
+    async function showDetails () {
     const movie = await get_movie_by_id(823464)
     detailsGrid.innerHTML =  `
     <div>
