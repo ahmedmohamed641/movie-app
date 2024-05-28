@@ -1,50 +1,45 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Movie App</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script defer type="module" src="js/main.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie App</title>
+  <link rel="stylesheet" href="css/index.css">
+  <script defer type="module" src="js/main.js"></script>
+  <script type="module" src="js/movie-options.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-  <body class="bg-dare-blue text-gray-light">
-
-    <header class=" sm:ml-2 sm:mr-2 md:ml-10 md:mr-10 mt-10 ml-20 mr-20">
-      <nav class=" flex gap-2 justify-between content-center items-center">
-        <figure class=" sm:ml-4 ml-8">
-          <img class=" sm:w-6 md:w-8 lg:w-10 xl:w-12" src="img/logo.png" alt="logo">
-        </figure>
-        <ul class="flex gap-5 text-gray mr-8">
-          <h3 class="hover:text-purple cursor-pointer sm:text-sm md:text-base lg:text-lg">Home</h3>
-          
+<body class="bg-dare-blue text-gray-light">
+  <header class="sm:ml-2 sm:mr-2 md:ml-10 md:mr-10 mt-10 ml-20 mr-20">
+    <nav class="flex gap-2 justify-between content-center items-center">
+      <figure class="sm:ml-4 ml-8">
+        <img class="sm:max-w-10 md:w-8 lg:w-10 xl:w-12" src="img/logo.png" alt="Logo">
+      </figure>
+      
+      <ul class="flex gap-5 text-gray mr-8">
+        <li><h3 class="hover:text-purple cursor-pointer sm:text-sm md:text-base lg:text-lg">Home</h3></li>
       </ul>
-      </nav>
-    </header>
-    
-    <main class=" sm:ml-6 sm:mr-6 md:m-16 m-28">
+    </nav>
+  </header>
+  
+  <main class="sm:ml-6 sm:mr-6 md:m-16 m-28">
+    <h1 class="xl:text-7xl lg:text-6xl md:text-4xl font-extrabold mt-28">Movies</h1>
+    <p class="text-gray mt-6">List of movies with all the details you will ever need. <span class="text-purple">Enjoy!</span></p>
 
-      <h1 class=" xl:text-7xl lg:text-6xl  md:text-4xl  font-extrabold mt-28">Movies</h1>
-      <p class="text-gray mt-6">List of movies with all the details you will ever need. <span class=" text-purple">enjoy!</span></p>
+    <form id="search-container-id" class="sm:w-60 md:w-80 lg:min-w-96 xl:min-w-96 flex justify-start content-center items-center pl-4 mt-12">
+      <input class="cursor-pointer md:text-sm w-full text-sm" type="text" id="inputBox" placeholder="Search Movies">
+    </form>
 
-      <form id="search-container-id" class=" md:w-10 lg:w-80 xl:w-96 flex justify-start content-center items-center pl-4 mt-12">
-<!--         <img class="w-5 h-5 mr-4" src="img/search-normal.png" alt=""> -->
-        <input  class=" cursor-pointer md:text-sm  w-full text-sm" type="text" id="inputBox" placeholder="Search Movies">
-      </form>
+    <ul id="filter-container-id" class="lg:flex xl:flex gap-3 mb-1 mt-10 sm:grid sm:grid-cols-2">
+      <li><button class="filters p-3 rounded text-gray">Action</button></li>
+      <li><button class="filters p-3 rounded text-gray">Horror</button></li>
+      <li><button class="filters p-3 rounded text-gray">Comedy</button></li>
+      <li><button class="filters p-3 rounded text-gray">Romance</button></li>
+    </ul>
 
-      <ul id="filter-container-id" class="lg:flex xl:flex gap-3 mb-1 mt-10 sm:grid sm:grid-cols-2">
-        <button class="filters p-3  rounded text-gray">Action</button>
-        <button class="filters p-3 rounded text-gray">Horrow</button>
-        <button class="filters p-3 rounded text-gray">Comedy</button>
-        <button class="filters p-3 rounded text-gray">Romance</button>
-      </ul>
-
-      <section id="movie-grid-id" class="gap-10 grid auto-cols-auto sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-
-      </section>
-    </main>
-
-  </body>
+    <section id="movie-grid-id" class="gap-10 grid auto-cols-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"></section>
+  </main>
+</body>
 </html>
