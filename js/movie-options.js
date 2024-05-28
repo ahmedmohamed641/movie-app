@@ -65,6 +65,7 @@ function setGenre() {
   });
 }
 
+// this should be called inside main.js
 setGenre();
 
 function highlightSelection() {
